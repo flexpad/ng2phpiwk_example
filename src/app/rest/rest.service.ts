@@ -59,7 +59,7 @@ export class RestService {
     return this.http.post(this.heroesUrl, params/*JSON.stringify({name: name})*/, {headers: this.headers})
       /*this.http.get(this.heroesUrl, {search: params})*/
       .toPromise()
-      .then(res => res.json().data as Hero)
+      .then(res => res.json() as Hero)
       .catch(this.handleError);
 
 
